@@ -1,0 +1,108 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://predictabledesigns.com/wp-content/uploads/2018/01/HeroImage2.jpg") no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 5%;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+main {
+    background: rgba(240, 248, 255, 0.7);
+    padding: 3%;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 7vw 5vw 5vw;
+    margin-top: 1vw;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 4.5fr repeat(6, 0.8fr) 4.5fr;
+    height: 1vw;
+}
+
+.tituloCelda {
+    display: flex;
+    background-color: #b1b1b1;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+}
+
+.cell {
+    width: 4.5vw;
+    height: 4.5vw;
+    border: 1px solid #000;
+    display: flex;
+    background-color: #3498db;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputOutput {
+    background-color: #FFFFFF;
+}
+
+.instrucsList {
+    display: flex;
+    align-items: center;
+}
+
+.instruc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+    color: #fff;
+    text-align: center;
+    line-height: 2vw;
+    font-size: 1.8vw;
+    margin: 0.1vw
+}
+
+.instruc-sec {
+    background-color: #db3450;
+}
+
+.instruc-pipe {
+    background-color: #32cf59;
+}
+
+.align-left {
+    justify-content: left;
+}
+
+.align-right {
+    justify-content: right;
+}
+
+.margin-left {
+    margin-left: 2vw
+}
+
+.margin-right {
+    margin-right: 2vw
+}
