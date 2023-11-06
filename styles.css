@@ -1,4 +1,4 @@
-/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Roboto Slab', serif;*/
 
 body::before {
     content: "";
@@ -14,7 +14,7 @@ body::before {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto Slab', serif;
     margin: 5%;
     padding: 0;
     background-color: aliceblue;
@@ -24,7 +24,7 @@ main {
     background: rgba(240, 248, 255, 0.7);
     padding: 3%;
     border-radius: 2vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 p {
@@ -34,6 +34,7 @@ p {
 
 ul {
     list-style-type: square;
+    font-weight: 400;
 }
 
 .grid {
@@ -76,6 +77,7 @@ ul {
 }
 
 .instruc {
+    font-family: 'Arial', serif;
     display: flex;
     align-items: center;
     justify-content: center;
