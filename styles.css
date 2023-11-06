@@ -1,3 +1,5 @@
+/*font-family: 'Roboto', sans-serif;*/
+
 body::before {
     content: "";
     position: fixed;
@@ -21,10 +23,13 @@ body {
 main {
     background: rgba(240, 248, 255, 0.7);
     padding: 3%;
+    border-radius: 2vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
     text-align: justify;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -79,8 +84,9 @@ ul {
     color: #fff;
     text-align: center;
     line-height: 2vw;
-    font-size: 1.8vw;
-    margin: 0.1vw
+    font-size: 1.4vw;
+    margin: 0.1vw;
+    border-radius: 1vw;
 }
 
 .instruc-sec {

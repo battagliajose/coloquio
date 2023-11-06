@@ -3,96 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>La técnica de la segmentaciónde instrucciones (PIPELINING).</title>
 </head>
 <body>
     <main>
-    <div>
-        <h1>Segmentación de  Instrucciones (PIPELINING)</h1>
-        <h4>Arquitectura de Computadoras - Coloquio<br>
-        UNER - Tecnicatura Universitaria en Desarrollo WEB - 2023<br>
-        José A. Battaglia</h4>
-        
+        <div>
+            <h1>Segmentación de  Instrucciones (PIPELINING)</h1>
+            <h4>Arquitectura de Computadoras - Coloquio<br>
+            UNER - Tecnicatura Universitaria en Desarrollo WEB - 2023<br>
+            José A. Battaglia</h4>
+            
 
-        <p>El pipelining en un procesador de computadora es una técnica de diseño que se utiliza para mejorar el rendimiento de la ejecución de instrucciones. Permite que múltiples instrucciones se ejecuten de manera concurrente en diferentes etapas del proceso, de manera similar a cómo una línea de montaje se utiliza para ensamblar productos en una fábrica. Esto acelera la velocidad de procesamiento de las instrucciones y, en última instancia, mejora el rendimiento del procesador.</p>
+            <p>El pipelining en un procesador de computadora es una técnica de diseño que se utiliza para mejorar el rendimiento de la ejecución de instrucciones. Permite que múltiples instrucciones se ejecuten de manera concurrente en diferentes etapas del proceso, de manera similar a cómo una línea de montaje se utiliza para ensamblar productos en una fábrica. Esto acelera la velocidad de procesamiento de las instrucciones y, en última instancia, mejora el rendimiento del procesador.</p>
 
-        <p>El proceso de ejecución de una instrucción se divide en varias etapas, y cada etapa realiza una parte específica del trabajo necesario para ejecutar una instrucción. Las etapas típicas de un pipeline en un procesador moderno incluyen:</p>
-        <ul>
-        <li>Buscar Instrucción (FI - Fetch Instruction)</li>
-        <li>Decodificar Instrucción (DI - Decode Instruction)</li>
-        <li>Calcular Operando (CO - Calculate Operands)</li>
-        <li>Buscar Operando (FO - Fetch Operands)</li>
-        <li>Ejecutar instrucción (EI - Execute Instruction)</li>
-        <li>Escribir Operando (WO - Write Operand)</li>
-        </ul>
-        <p>Cada etapa en el pipeline se encarga de una instrucción diferente en cada ciclo de reloj, lo que significa que varias instrucciones pueden estar en diferentes etapas de ejecución al mismo tiempo. Esto permite que el procesador ejecute una nueva instrucción en cada ciclo de reloj, lo que aumenta significativamente la velocidad de procesamiento en comparación con la ejecución secuencial.</p>
+            <p>El proceso de ejecución de una instrucción se divide en varias etapas, y cada etapa realiza una parte específica del trabajo necesario para ejecutar una instrucción. Las etapas típicas de un pipeline en un procesador moderno incluyen:</p>
+            <ul>
+            <li>Buscar Instrucción (FI - Fetch Instruction)</li>
+            <li>Decodificar Instrucción (DI - Decode Instruction)</li>
+            <li>Calcular Operando (CO - Calculate Operands)</li>
+            <li>Buscar Operando (FO - Fetch Operands)</li>
+            <li>Ejecutar instrucción (EI - Execute Instruction)</li>
+            <li>Escribir Operando (WO - Write Operand)</li>
+            </ul>
+            <p>Cada etapa en el pipeline se encarga de una instrucción diferente en cada ciclo de reloj, lo que significa que varias instrucciones pueden estar en diferentes etapas de ejecución al mismo tiempo. Esto permite que el procesador ejecute una nueva instrucción en cada ciclo de reloj, lo que aumenta significativamente la velocidad de procesamiento en comparación con la ejecución secuencial.</p>
 
-        <p>Sin embargo, el pipelining no está exento de desafíos, ya que algunas instrucciones pueden depender de los resultados de instrucciones anteriores, lo que puede dar lugar a conflictos y retrasos en la ejecución. Para abordar estos problemas, se pueden implementar técnicas como la reordenación de instrucciones, el avance especulativo y la detección y solución de conflictos</p>
+            <p>Sin embargo, el pipelining no está exento de desafíos, ya que algunas instrucciones pueden depender de los resultados de instrucciones anteriores, lo que puede dar lugar a conflictos y retrasos en la ejecución. Para abordar estos problemas, se pueden implementar técnicas como la reordenación de instrucciones, el avance especulativo y la detección y solución de conflictos</p>
 
-    </div>
-    <h3>Sin Segmentación de Instrucciones</h3>
-    <div class="grid">
-        <div class="row">
-            <div class="tituloCelda">Instruc.</div>
-            <div class="tituloCelda">FI</div>
-            <div class="tituloCelda">DI</div>
-            <div class="tituloCelda">CO</div>
-            <div class="tituloCelda">FO</div>
-            <div class="tituloCelda">EI</div>
-            <div class="tituloCelda">WO</div>
-            <div class="tituloCelda">Finaliz.</div>
         </div>
-
-        <div class="row">
-            <div class="instrucsList align-right sec">
-                <div class="instruc instruc-sec" id="object1" draggable="true">MOV</div>
-                <div class="instruc instruc-sec" id="object2" draggable="true">INC</div>
-                <div class="instruc instruc-sec" id="object3" draggable="true">JZ</div>
-                <div class="instruc instruc-sec" id="object4" draggable="true">MOV</div>
-                <div class="instruc instruc-sec" id="object5" draggable="true">INC</div>
-                <div class="instruc instruc-sec" id="object6" draggable="true">JZ</div>
+        <h3>Sin Segmentación de Instrucciones</h3>
+        <div class="grid">
+            <div class="row">
+                <div class="tituloCelda">Instruc.</div>
+                <div class="tituloCelda">FI</div>
+                <div class="tituloCelda">DI</div>
+                <div class="tituloCelda">CO</div>
+                <div class="tituloCelda">FO</div>
+                <div class="tituloCelda">EI</div>
+                <div class="tituloCelda">WO</div>
+                <div class="tituloCelda">Finaliz.</div>
             </div>
-            <div class="cell sec margin-left"></div>
-            <div class="cell sec"></div>
-            <div class="cell sec"></div>
-            <div class="cell sec"></div>
-            <div class="cell sec"></div>
-            <div class="cell sec margin-right"></div>
-            <div class="instrucsList align-left sec"></div>
-        </div>
-    </div>
-        <h3>Con Segmentación de Instrucciones (Pipelining)</h3>
-    <div class="grid">
-        <div class="row">
-            <div class="tituloCelda">Instruc.</div>
-            <div class="tituloCelda">FI</div>
-            <div class="tituloCelda">DI</div>
-            <div class="tituloCelda">CO</div>
-            <div class="tituloCelda">FO</div>
-            <div class="tituloCelda">EI</div>
-            <div class="tituloCelda">WO</div>
-            <div class="tituloCelda">Finaliz.</div>
-        </div> 
-        <div class="row">
-            <div class="instrucsList align-right pipe">
-                <div class="instruc instruc-pipe" id="object1" draggable="true">MOV</div>
-                <div class="instruc instruc-pipe" id="object2" draggable="true">INC</div>
-                <div class="instruc instruc-pipe" id="object3" draggable="true">JZ</div>
-                <div class="instruc instruc-pipe" id="object4" draggable="true">MOV</div>
-                <div class="instruc instruc-pipe" id="object5" draggable="true">INC</div>
-                <div class="instruc instruc-pipe" id="object6" draggable="true">JZ </div>
+
+            <div class="row">
+                <div class="instrucsList align-right sec">
+                    <div class="instruc instruc-sec" id="object1" draggable="true">MOV</div>
+                    <div class="instruc instruc-sec" id="object2" draggable="true">INC</div>
+                    <div class="instruc instruc-sec" id="object3" draggable="true">JZ</div>
+                    <div class="instruc instruc-sec" id="object4" draggable="true">MOV</div>
+                    <div class="instruc instruc-sec" id="object5" draggable="true">INC</div>
+                    <div class="instruc instruc-sec" id="object6" draggable="true">JZ</div>
+                </div>
+                <div class="cell sec margin-left"></div>
+                <div class="cell sec"></div>
+                <div class="cell sec"></div>
+                <div class="cell sec"></div>
+                <div class="cell sec"></div>
+                <div class="cell sec margin-right"></div>
+                <div class="instrucsList align-left sec"></div>
             </div>
-                <div class="cell pipe margin-left"></div>
-                <div class="cell pipe"></div>
-                <div class="cell pipe"></div>
-                <div class="cell pipe"></div>
-                <div class="cell pipe"></div>
-                <div class="cell pipe margin-right"></div>
-                <div class="instrucsList align-left pipe"></div>
         </div>
-    </div>
-</main>
+            <h3>Con Segmentación de Instrucciones (Pipelining)</h3>
+        <div class="grid">
+            <div class="row">
+                <div class="tituloCelda">Instruc.</div>
+                <div class="tituloCelda">FI</div>
+                <div class="tituloCelda">DI</div>
+                <div class="tituloCelda">CO</div>
+                <div class="tituloCelda">FO</div>
+                <div class="tituloCelda">EI</div>
+                <div class="tituloCelda">WO</div>
+                <div class="tituloCelda">Finaliz.</div>
+            </div> 
+            <div class="row">
+                <div class="instrucsList align-right pipe">
+                    <div class="instruc instruc-pipe" id="object1" draggable="true">MOV</div>
+                    <div class="instruc instruc-pipe" id="object2" draggable="true">INC</div>
+                    <div class="instruc instruc-pipe" id="object3" draggable="true">JZ</div>
+                    <div class="instruc instruc-pipe" id="object4" draggable="true">MOV</div>
+                    <div class="instruc instruc-pipe" id="object5" draggable="true">INC</div>
+                    <div class="instruc instruc-pipe" id="object6" draggable="true">JZ </div>
+                </div>
+                    <div class="cell pipe margin-left"></div>
+                    <div class="cell pipe"></div>
+                    <div class="cell pipe"></div>
+                    <div class="cell pipe"></div>
+                    <div class="cell pipe"></div>
+                    <div class="cell pipe margin-right"></div>
+                    <div class="instrucsList align-left pipe"></div>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
